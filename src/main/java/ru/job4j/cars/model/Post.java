@@ -11,6 +11,7 @@ import java.util.List;
 @Table(name = "auto_post")
 @Data
 public class Post {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -27,7 +28,11 @@ public class Post {
     @JoinTable(
             name = "participates",
             joinColumns = {@JoinColumn(name = "user_id")},
-            inverseJoinColumns = {@JoinColumn(name = "зщые_id")}
+            inverseJoinColumns = {@JoinColumn(name = "post_id")}
     )
     private List<User> participates = new ArrayList<>();
+
+    @OneToOne
+    @JoinColumn(name = "car_id")
+    private Car car;
 }
