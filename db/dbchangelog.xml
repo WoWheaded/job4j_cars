@@ -13,4 +13,6 @@
     <include file="scripts/008_ddl_create_owners_table.sql" relativeToChangelogFile="true"/>
     <include file="scripts/009_ddl_create_history_owner_table.sql" relativeToChangelogFile="true"/>
     <include file="scripts/010_ddl_alter_auto_post_add_column_car_id.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/011_ddl_create_photos_table.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/012_ddl_alter_cars_add_photoId_column.sql" relativeToChangelogFile="true"/>
 </databaseChangeLog>

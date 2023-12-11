@@ -3,7 +3,9 @@ package ru.job4j.cars.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -30,4 +32,8 @@ public class Car {
 
     @OneToMany(mappedBy = "car")
     private Set<History> history = new HashSet<>();
+
+    @OneToMany
+    @JoinColumn(name = "photo_id")
+    private List<Photo> photos = new ArrayList<>();
 }
